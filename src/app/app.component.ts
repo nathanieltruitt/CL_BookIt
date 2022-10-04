@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   selectedFeature!: string;
+
+  onNavigatePage(event: string) {
+    this.selectedFeature = event;
+  }
 }

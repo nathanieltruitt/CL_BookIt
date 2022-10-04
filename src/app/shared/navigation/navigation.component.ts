@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./navigation.component.css'],
 })
 export class NavigationComponent implements OnInit {
-  @Output() currentPage = new EventEmitter();
+  @Output() currentPage = new EventEmitter<string>();
   collapsed = true;
   show = false;
 
