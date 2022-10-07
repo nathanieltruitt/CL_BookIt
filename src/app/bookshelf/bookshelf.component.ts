@@ -12,4 +12,8 @@ export class BookshelfComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleBook(event: Book) {
+    this.selectedBook = event;
+  }
 }

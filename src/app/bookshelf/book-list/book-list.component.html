@@ -1,9 +1,9 @@
 <div class="row mb-3">
   <div class="col-md-12">
     <app-book
-      [book]="book"
-      *ngFor="let book of myBooks"
-      (bookSelected)="handleBookSelected(book)"
+      [book]="bookEl"
+      *ngFor="let bookEl of myBooks"
+      (bookSelected)="handleBookSelected(bookEl)"
     ></app-book>
   </div>
 </div>
