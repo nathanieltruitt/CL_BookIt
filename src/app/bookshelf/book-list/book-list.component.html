@@ -1,11 +1,16 @@
-<div class="row mb-3">
-  <div class="col-md-12">
-    <ng-container *ngIf="getBooks() | async as books">
+<ng-container *ngIf="onGetBooks() | async as books">
+  <div class="row mb-3">
+    <div class="col-md-12" *ngFor="let bookEl of books; let i = index">
       <app-book
         [book]="bookEl"
-        *ngFor="let bookEl of books"
         (bookSelected)="handleBookSelected(bookEl)"
       ></app-book>
-    </ng-container>
+      <button
+        class="float-right btn btn-danger btn-sm"
+        (click)="onRemoveBook(i)"
+      >
+        &minus;
+      </button>
+    </div>
   </div>
-</div>
+</ng-container>

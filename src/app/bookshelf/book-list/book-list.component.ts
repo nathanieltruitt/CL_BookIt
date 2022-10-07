@@ -18,7 +18,11 @@ export class BookListComponent implements OnInit {
     this.selectedBook.emit(chosenBook);
   }
 
-  getBooks() {
+  onGetBooks() {
     return this.bookshelfService.bookList$;
+  }
+
+  onRemoveBook(idx: number) {
+    this.bookshelfService.removeBook(idx);
   }
 }
