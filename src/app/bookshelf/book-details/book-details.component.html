@@ -30,6 +30,22 @@
 <hr />
 <div class="row">
   <div class="col-md-12">
-    <button type="button" class="btn btn-primary">Edit Book</button>
+    <div class="dropdown" appDropdown>
+      <button
+        type="button"
+        id="dropdownMenuButton"
+        class="btn btn-primary"
+        aria-expanded="false"
+        aria-haspopup="true"
+        role="button"
+        data-toggle="dropdown"
+      >
+        Edit Book
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item">Update Book</a>
+        <a class="dropdown-item">Delete Book</a>
+      </div>
+    </div>
   </div>
 </div>
