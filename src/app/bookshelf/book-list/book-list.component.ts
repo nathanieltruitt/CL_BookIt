@@ -9,15 +9,9 @@ import { BookshelfService } from '../bookshelf.service';
   styleUrls: ['./book-list.component.css'],
 })
 export class BookListComponent implements OnInit {
-  @Output() selectedBook = new Subject<Book>();
-
   constructor(private bookshelfService: BookshelfService) {}
 
   ngOnInit(): void {}
-
-  handleBookSelected(chosenBook: Book) {
-    this.selectedBook.next(chosenBook);
-  }
 
   onGetBooks() {
     return this.bookshelfService.bookList$;

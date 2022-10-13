@@ -1,12 +1,12 @@
-import { EventEmitter, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { Book } from '../shared/book/book.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookshelfService {
-  bookSelected = new EventEmitter<Book>();
+  bookSelected = new Subject<Book>();
 
   private myBooks: Book[] = [
     new Book(

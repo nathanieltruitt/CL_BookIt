@@ -12,6 +12,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { BookComponent } from './shared/book/book.component';
 
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { NotificationComponent } from './shared/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     NavigationComponent,
     BookComponent,
     DropdownDirective,
+    NotificationComponent,
   ],
   imports: [BrowserModule],
   providers: [],
