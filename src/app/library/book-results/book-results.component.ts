@@ -17,6 +17,7 @@ export class BookResultsComponent implements OnInit {
   ngOnInit(): void {}
 
   onSaveBook(book: Book) {
+    this.libraryService.bookSelected$.next(book);
     return this.bookshelfService.saveBook(book);
   }
 

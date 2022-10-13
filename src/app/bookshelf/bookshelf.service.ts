@@ -7,6 +7,7 @@ import { Book } from '../shared/book/book.model';
 })
 export class BookshelfService {
   bookSelected = new Subject<Book>();
+  aWildBook = new Subject();
 
   private myBooks: Book[] = [
     new Book(

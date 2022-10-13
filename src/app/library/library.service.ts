@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { Book } from '../shared/book/book.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LibraryService {
+  bookSelected$ = new Subject<Book>();
   private allBooks: Book[] = [
     new Book(
       'API Book 1',

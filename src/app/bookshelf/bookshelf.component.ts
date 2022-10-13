@@ -8,17 +8,11 @@ import { BookshelfService } from './bookshelf.service';
   styleUrls: ['./bookshelf.component.css'],
 })
 export class BookshelfComponent implements OnInit {
-  selectedBook!: Book;
-
   constructor(private bookshelfService: BookshelfService) {}
 
-  ngOnInit(): void {
-    this.bookshelfService.bookSelected.subscribe((book) => {
-      this.selectedBook = book;
-    });
-  }
+  ngOnInit(): void {}
 
-  handleBook(event: Book) {
-    this.selectedBook = event;
+  getSelectedBook() {
+    return this.bookshelfService.bookSelected;
   }
 }
