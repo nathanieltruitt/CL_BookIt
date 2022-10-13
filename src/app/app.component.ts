@@ -9,6 +9,6 @@ export class AppComponent {
   selectedFeature!: string;
 
   onNavigatePage(event: string) {
-    this.selectedFeature = event;
+    console.log(event);
   }
 }

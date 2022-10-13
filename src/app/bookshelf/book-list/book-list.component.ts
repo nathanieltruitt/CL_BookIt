@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Book } from 'src/app/shared/book/book.model';
 import { BookshelfService } from '../bookshelf.service';
 
@@ -8,14 +9,14 @@ import { BookshelfService } from '../bookshelf.service';
   styleUrls: ['./book-list.component.css'],
 })
 export class BookListComponent implements OnInit {
-  @Output() selectedBook = new EventEmitter<Book>();
+  @Output() selectedBook = new Subject<Book>();
 
   constructor(private bookshelfService: BookshelfService) {}
 
   ngOnInit(): void {}
 
   handleBookSelected(chosenBook: Book) {
-    this.selectedBook.emit(chosenBook);
+    this.selectedBook.next(chosenBook);
   }
 
   onGetBooks() {

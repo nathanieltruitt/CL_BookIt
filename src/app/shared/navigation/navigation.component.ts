@@ -17,6 +17,6 @@ export class NavigationComponent implements OnInit {
   onSelectPage(page: string) {
     // emit the currentPage string up to app component which then stores it in the selectedFeature property.
     // * refer to line 2 on app.component.html
-    this.currentPage.emit(page);
+    this.currentPage.next(page);
   }
 }
