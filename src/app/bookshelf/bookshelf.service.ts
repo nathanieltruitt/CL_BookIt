@@ -39,6 +39,10 @@ export class BookshelfService {
 
   constructor() {}
 
+  getBook(idx: number) {
+    return this.myBooks[this.myBooks.length - 1];
+  }
+
   saveBook(book: Book) {
     this.myBooks.push(book);
     this.bookList$.next(this.myBooks.slice());

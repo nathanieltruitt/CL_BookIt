@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
@@ -13,6 +14,7 @@ import { BookComponent } from './shared/book/book.component';
 
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { NotificationComponent } from './shared/notification/notification.component';
+import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-home.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import { NotificationComponent } from './shared/notification/notification.compon
     BookComponent,
     DropdownDirective,
     NotificationComponent,
+    BookshelfHomeComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

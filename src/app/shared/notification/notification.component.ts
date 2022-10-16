@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BookshelfService } from 'src/app/bookshelf/bookshelf.service';
 import { LibraryService } from 'src/app/library/library.service';
 
 @Component({

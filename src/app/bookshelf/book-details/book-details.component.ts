@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Book } from 'src/app/shared/book/book.model';
+import { BookshelfService } from '../bookshelf.service';
 
 @Component({
   selector: 'app-book-details',
@@ -8,8 +10,17 @@ import { Book } from 'src/app/shared/book/book.model';
 })
 export class BookDetailsComponent implements OnInit {
   @Input() book!: Book;
+  idx!: number;
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private bookshelfService: BookshelfService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.idx = +params['id'];
+      this.book = this.bookshelfService.getBook(this.idx);
+    });
+  }
 }
