@@ -6,7 +6,6 @@ import { Book } from '../shared/book/book.model';
   providedIn: 'root',
 })
 export class BookshelfService {
-  bookSelected = new Subject<Book>();
   aWildBook = new Subject();
 
   private myBooks: Book[] = [
@@ -40,7 +39,7 @@ export class BookshelfService {
   constructor() {}
 
   getBook(idx: number) {
-    return this.myBooks[this.myBooks.length - 1];
+    return this.myBooks.slice()[idx];
   }
 
   saveBook(book: Book) {

@@ -8,11 +8,7 @@ import { BookshelfService } from './bookshelf.service';
   styleUrls: ['./bookshelf.component.css'],
 })
 export class BookshelfComponent implements OnInit {
-  constructor(private bookshelfService: BookshelfService) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  getSelectedBook() {
-    return this.bookshelfService.bookSelected;
-  }
 }

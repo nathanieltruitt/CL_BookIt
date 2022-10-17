@@ -1,6 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Subject } from 'rxjs';
-import { Book } from 'src/app/shared/book/book.model';
+import { Component, OnInit } from '@angular/core';
 import { BookshelfService } from '../bookshelf.service';
 
 @Component({

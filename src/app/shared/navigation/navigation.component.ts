@@ -7,7 +7,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   collapsed = true;
-  show = false;
 
   constructor() {}
 

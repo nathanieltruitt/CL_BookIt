@@ -9,7 +9,7 @@ import { BookshelfService } from '../bookshelf.service';
   styleUrls: ['./book-details.component.css'],
 })
 export class BookDetailsComponent implements OnInit {
-  @Input() book!: Book;
+  book!: Book;
   idx!: number;
 
   constructor(

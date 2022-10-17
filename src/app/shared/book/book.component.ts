@@ -9,13 +9,9 @@ import { Book } from './book.model';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book;
-  @Output() bookSelected = new EventEmitter<void>();
+  @Input() idx: number;
 
-  constructor(private bookshelfService: BookshelfService) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  onBookSelected() {
-    this.bookshelfService.bookSelected.next(this.book);
-  }
 }
