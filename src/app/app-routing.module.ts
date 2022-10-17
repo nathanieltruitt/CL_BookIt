@@ -19,10 +19,18 @@ const routes: Routes = [
         path: '',
         component: BookshelfHomeComponent,
       },
+      // {
+      //   path: 'new',
+      //   component: BookshelfEditorComponent
+      // },
       {
         path: ':id',
         component: BookDetailsComponent,
       },
+      // {
+      //   path: ':id/edit',
+      //   component: BookshelfEditorComponent
+      // }
     ],
   },
   {

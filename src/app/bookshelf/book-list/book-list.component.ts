@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BookshelfService } from '../bookshelf.service';
 
 @Component({
@@ -7,7 +8,11 @@ import { BookshelfService } from '../bookshelf.service';
   styleUrls: ['./book-list.component.css'],
 })
 export class BookListComponent implements OnInit {
-  constructor(private bookshelfService: BookshelfService) {}
+  constructor(
+    private bookshelfService: BookshelfService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {}
 
@@ -17,5 +22,9 @@ export class BookListComponent implements OnInit {
 
   onRemoveBook(idx: number) {
     this.bookshelfService.removeBook(idx);
+  }
+
+  onNewBook() {
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 }

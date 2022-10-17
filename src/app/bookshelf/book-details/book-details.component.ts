@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Book } from 'src/app/shared/book/book.model';
 import { BookshelfService } from '../bookshelf.service';
 
@@ -13,6 +13,7 @@ export class BookDetailsComponent implements OnInit {
   idx!: number;
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private bookshelfService: BookshelfService
   ) {}
@@ -22,5 +23,13 @@ export class BookDetailsComponent implements OnInit {
       this.idx = +params['id'];
       this.book = this.bookshelfService.getBook(this.idx);
     });
+  }
+
+  onEditBook() {
+    this.router.navigate(['../', this.idx, 'edit'], { relativeTo: this.route });
+  }
+
+  onRemoveBook() {
+    this.bookshelfService.removeBook(this.idx);
   }
 }
