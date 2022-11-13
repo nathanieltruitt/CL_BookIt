@@ -1,5 +1,5 @@
 <ng-container *ngIf="onGetBooks() | async as books">
-  <div class="row mb-3">
+  <div class="row mb-3" [@swoopIn]>
     <div class="col-md-9" *ngFor="let bookEl of books">
       <app-book [book]="bookEl"></app-book>
       <button
