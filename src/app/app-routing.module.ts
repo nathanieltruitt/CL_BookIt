@@ -4,6 +4,7 @@ import { BookDetailsComponent } from './bookshelf/book-details/book-details.comp
 import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-home.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
 import { LibraryComponent } from './library/library.component';
+import { AuthComponent } from './shared/auth/auth.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'library',
     component: LibraryComponent,
+  },
+  {
+    path: 'auth',
+    component: AuthComponent,
   },
 ];
 
